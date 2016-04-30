@@ -38,8 +38,8 @@ public class Antisquare {
      */
     public static String[] getSuitableFonts(int character) {
         // Binary search in the Antisquare data.
-        int offset = 0;
-        int zone = 0;
+        int offset;
+        int zone;
 
 
         // HACK: the AntiquareData.zones exceeded the 65KB size for
@@ -47,9 +47,10 @@ public class Antisquare {
         // I was going to generalize it but then I realized the fontSets
         // class can get just as big (it just isn't in my case because
         // I'm only using one font) so.. ohh well.
-        if(character < 135909)
+        if(character < AntisquareData.Zones2.zones2[0]) {
             zone = Arrays.binarySearch(AntisquareData.zones, character);
-        else {
+            offset = 0;
+        } else {
             zone = Arrays.binarySearch(AntisquareData.Zones2.zones2, character);
             offset = AntisquareData.zones.length;
         }
@@ -73,15 +74,15 @@ public class Antisquare {
      */
     public static String getSuitableFonts(String string) {
         // For each font, count how many characters of the string are correctly displayed.
-        Map<String, Integer> votes = new HashMap<String, Integer>();
+        Map<String, Integer> votes = new HashMap<>();
         for (char character : string.toCharArray()) {
             for (String font : getSuitableFonts(character)) {
                 if (votes.containsKey(font)) {
-                    int incrementedVoteCount = votes.get(font).intValue() + 1;
-                    votes.put(font, new Integer(incrementedVoteCount));
+                    int incrementedVoteCount = votes.get(font) + 1;
+                    votes.put(font, incrementedVoteCount);
                 }
                 else {
-                    votes.put(font, new Integer(1));
+                    votes.put(font, 1);
                 }
             }
         }
@@ -89,7 +90,7 @@ public class Antisquare {
         String mostSuitableFont = null;
         int mostSuitableFontVotes = 0;
         for(Map.Entry<String,Integer> entry : votes.entrySet()){
-            if(entry.getValue().intValue() > mostSuitableFontVotes){
+            if(entry.getValue() > mostSuitableFontVotes){
                 mostSuitableFont = entry.getKey();
                 mostSuitableFontVotes = entry.getValue();
             }
