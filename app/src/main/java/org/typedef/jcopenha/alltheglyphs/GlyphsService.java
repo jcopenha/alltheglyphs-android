@@ -78,23 +78,6 @@ public class GlyphsService extends WallpaperService {
             }
         }
 
-        private int generatePossibleChar() {
-            SecureRandom sr = new SecureRandom();
-            int u = sr.nextInt() & 0x1FFFFF;
-            int n = 1;
-            // crazy.. it's acutally hit 100 random chars that didn't
-            // meet this criteria..
-            while( n < 1000 && (u > 0x10FFFF ||
-                    Character.getType(u) == Character.PRIVATE_USE ||
-                    Character.getType(u) == Character.SPACE_SEPARATOR ||
-                    Character.getName(u) == null)) {
-                u = sr.nextInt() & 0x1FFFFF;
-                n++;
-            }
-            Log.d("UNICODE", "Did " + n + " char lookup");
-            return u;
-        }
-
         private HashMap<String, Typeface> typefaceCache = new HashMap<String, Typeface>();
 
         private void drawUnicodeGlyph() {
@@ -107,26 +90,15 @@ public class GlyphsService extends WallpaperService {
 
             Canvas canvas = holder.lockCanvas();
             canvas.save();
-            int u = 0;
-            String[] fonts = null;
-            int n = 0;
-            do {
-                u = generatePossibleChar();
-                fonts = Antisquare.getSuitableFonts(u);
-                n++;
-            } while(fonts.length == 0 && n < 10); // limit of 10 just in case..
-            String description = "U+" + String.format("%06X",u) + ": " + Character.getName(u);
-            Log.d("UNICODE", description);
-            Log.d("UNICODE", "Did " + n + " font lookup");
 
-            String output = new String(Character.toChars(u));
+            DisplayGlyph glyph = DisplayGlyph.Generate();
 
             Typeface font = null;
-            if(typefaceCache.containsKey(fonts[0])) {
-                font = typefaceCache.get(fonts[0]);
+            if(typefaceCache.containsKey(glyph.getFontName())) {
+                font = typefaceCache.get(glyph.getFontName());
             } else {
-                font = Typeface.createFromAsset(getAssets(), fonts[0]);
-                typefaceCache.put(fonts[0], font);
+                font = Typeface.createFromAsset(getAssets(), glyph.getFontName());
+                typefaceCache.put(glyph.getFontName(), font);
             }
 
             Paint paint = new Paint();
@@ -136,11 +108,11 @@ public class GlyphsService extends WallpaperService {
 
             paint.setColor(Color.BLACK);
             paint.setTextSize(40);
-            canvas.drawText(description, 10, 625, paint);
+            canvas.drawText(glyph.getGlyphName(), 10, 625, paint);
 
             paint.setTextSize(212);
             paint.setTypeface(font);
-            canvas.drawText(output, 10, 425, paint);
+            canvas.drawText(glyph.getGlyph(), 10, 425, paint);
 
             /*
             TextView text = (TextView)findViewById(R.id.unicode);
