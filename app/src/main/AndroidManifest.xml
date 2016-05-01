@@ -22,10 +22,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--<service
-            android:name=".GIFService"
+        <service
+            android:name=".GlyphsService"
             android:enabled="true"
-            android:label="GIF Wallpaper"
+            android:label="All The Glyphs"
             android:permission="android.permission.BIND_WALLPAPER" >
             <intent-filter>
                 <action android:name="android.service.wallpaper.WallpaperService"/>
@@ -34,7 +34,7 @@
                 android:name="android.service.wallpaper"
                 android:resource="@xml/wallpaper" >
             </meta-data>
-        </service>-->
+        </service>
     </application>
 
 
