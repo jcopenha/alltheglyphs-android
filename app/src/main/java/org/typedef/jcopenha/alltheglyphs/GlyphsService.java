@@ -7,13 +7,23 @@ import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.os.Handler;
 import android.service.wallpaper.WallpaperService;
+import android.support.design.widget.CoordinatorLayout;
+import android.text.StaticLayout;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.SurfaceHolder;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.io.IOException;
 import java.security.SecureRandom;
 import java.util.HashMap;
+import android.view.View;
+import android.content.Context;
+import android.view.View.MeasureSpec;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.Button;
+import android.graphics.Bitmap;
 
 import fr.free.nrw.Antisquare;
 
@@ -23,9 +33,6 @@ import fr.free.nrw.Antisquare;
 public class GlyphsService extends WallpaperService {
     @Override
     public WallpaperService.Engine onCreateEngine() {
-        //  Movie movie = Movie.decodeStream(
-        //          getResources().getAssets().open("girl.gif"));
-
         return new GlyphsWallpaperEngine();
 
     }
@@ -40,13 +47,11 @@ public class GlyphsService extends WallpaperService {
         private long lastUpdate;
 
         public GlyphsWallpaperEngine() {
-            //this.movie = movie;
             handler = new Handler();
         }
 
         private Runnable drawGIF = new Runnable() {
             public void run() {
-                //draw();
                 lastUpdate = System.currentTimeMillis();
                 drawUnicodeGlyph();
             }
@@ -57,34 +62,12 @@ public class GlyphsService extends WallpaperService {
             super.onCreate(surfaceHolder);
             this.holder = surfaceHolder;
         }
-        private void draw() {
-            if (visible) {
-                Canvas canvas = holder.lockCanvas();
-                canvas.save();
-                Paint paint = new Paint();
-                paint.setColor(Color.WHITE);
-                paint.setStyle(Paint.Style.FILL);
-                canvas.drawPaint(paint);
-
-                paint.setColor(Color.BLACK);
-                paint.setTextSize(20);
-                canvas.drawText("Some Text", 10, 25, paint);
-                canvas.restore();
-                holder.unlockCanvasAndPost(canvas);
-                movie.setTime((int) (System.currentTimeMillis() % movie.duration()));
-
-                handler.removeCallbacks(drawGIF);
-                handler.postDelayed(drawGIF, frameDuration);
-            }
-        }
 
         private HashMap<String, Typeface> typefaceCache = new HashMap<String, Typeface>();
 
         private void drawUnicodeGlyph() {
             if(!visible)
                 return;
-            // if(System.currentTimeMillis() - lastUpdate < 5000)
-            //   return;
 
             lastUpdate = System.currentTimeMillis();
 
@@ -101,29 +84,49 @@ public class GlyphsService extends WallpaperService {
                 typefaceCache.put(glyph.getFontName(), font);
             }
 
+            // clear the screen.
             Paint paint = new Paint();
             paint.setColor(Color.WHITE);
             paint.setStyle(Paint.Style.FILL);
             canvas.drawPaint(paint);
 
-            paint.setColor(Color.BLACK);
-            paint.setTextSize(40);
-            canvas.drawText(glyph.getGlyphName(), 10, 625, paint);
+            LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            RelativeLayout v = new RelativeLayout(getApplicationContext());
+            inflater.inflate(R.layout.content_main, v, true);
 
-            paint.setTextSize(212);
-            paint.setTypeface(font);
-            canvas.drawText(glyph.getGlyph(), 10, 425, paint);
+            v.setLayoutParams(new LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,
+                  RelativeLayout.LayoutParams.MATCH_PARENT));
+            Log.i("UNICODE","w:" + canvas.getWidth() + ", h:" + canvas.getHeight());
 
-            /*
-            TextView text = (TextView)findViewById(R.id.unicode);
+
+            TextView text = (TextView)v.findViewById(R.id.unicode);
             text.setTypeface(font);
-            text.setText(output); // How to make Emojis bigger?
+            text.setTextColor(Color.BLACK);
+            text.setText(glyph.getGlyph()); // How to make Emojis bigger?
             // bigger emojis work just fine on actual phone
             // adjusted emulator to use 2GB RAM/ 256MB VM heap to see if that helps
 
-            TextView name = (TextView)findViewById(R.id.unicode_name);
-            name.setText(description);
-            */
+            TextView name = (TextView)v.findViewById(R.id.unicode_name);
+            name.setTextColor(Color.BLACK);
+            name.setText(glyph.getGlyphName());
+
+            // reusing the other view so lets hide the button.
+            Button bt = (Button)v.findViewById(R.id.button);
+            bt.setVisibility(View.INVISIBLE);
+
+            // maybe there is a better way to do this but a few hours of furious google-programming
+            // left me with this solution for now.
+            v.measure(MeasureSpec.makeMeasureSpec(canvas.getWidth(),MeasureSpec.EXACTLY),
+                      MeasureSpec.makeMeasureSpec(canvas.getHeight(),MeasureSpec.EXACTLY));
+            v.layout(0, 0, canvas.getWidth(), canvas.getHeight());
+
+            Bitmap b = Bitmap.createBitmap(v.getMeasuredWidth(), v.getMeasuredHeight(), Bitmap.Config.ARGB_8888);
+            Canvas c = new Canvas(b);
+            v.layout(0, 0, v.getMeasuredWidth(), v.getMeasuredHeight());
+            v.draw(c);
+            canvas.drawBitmap(b,0,0,null);
+            //Log.i("UNICODE","vw:" + v.getWidth() + ", vh:" + v.getHeight());
+
             canvas.restore();
             holder.unlockCanvasAndPost(canvas);
 
