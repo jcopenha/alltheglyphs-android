@@ -103,6 +103,7 @@ public abstract class AppCompatPreferenceActivity extends PreferenceActivity {
         if (id == android.R.id.home) {
 
             finish();
+            UnicodeBlocks.SaveFilter();
             return true;
         }
         return super.onOptionsItemSelected(item);

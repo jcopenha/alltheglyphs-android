@@ -1,5 +1,12 @@
 package org.typedef.jcopenha.alltheglyphs;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.preference.Preference;
+import android.preference.PreferenceManager;
+import android.preference.TwoStatePreference;
+import android.widget.ArrayAdapter;
 
+import java.util.ArrayList;
 
 /**
  * Created by jcopenha on 5/8/16.
@@ -277,6 +284,35 @@ public class UnicodeBlocks {
 
     public static UnicodeBlock getUnicodeBlock(int n) {
         return blocks[n];
+    }
+
+    private static ArrayList<int[]> BlockRanges;
+
+    public static void SaveFilter() {
+        ArrayList<int[]> filter = new ArrayList<>();
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(MainApplication.getAppContext());
+        for(int x = 0; x < UnicodeBlocks.getCountOfBlocks(); x++) {
+            UnicodeBlock block = UnicodeBlocks.getUnicodeBlock(x);
+            if(sp.getBoolean(block.getPreferencesKey(),true) == true) {
+                // Merge valid ranges as we go
+                if(filter.size() > 0 && filter.get(filter.size()-1)[1]+1 == block.getLowerBound()) {
+                    int[] v = filter.get(filter.size()-1);
+                    v[1] = block.getUpperBound();
+                    filter.set(filter.size()-1,v);
+                } else {
+                    filter.add(new int[]{block.getLowerBound(), block.getUpperBound()});
+                }
+            }
+        }
+
+        BlockRanges = filter;
+    }
+
+    public static ArrayList<int[]> getBlockRanges() {
+        if(BlockRanges == null)
+            BlockRanges = new ArrayList<>();
+
+        return BlockRanges;
     }
 
 }
