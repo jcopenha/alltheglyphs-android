@@ -1,11 +1,13 @@
 package org.typedef.jcopenha.alltheglyphs;
 
+import android.content.SharedPreferences;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Movie;
 import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.service.wallpaper.WallpaperService;
 import android.support.design.widget.CoordinatorLayout;
 import android.text.StaticLayout;
@@ -38,7 +40,7 @@ public class GlyphsService extends WallpaperService {
     }
 
     private class GlyphsWallpaperEngine extends WallpaperService.Engine {
-        private final int frameDuration = 5000;
+        private int frameDuration = 5000;
 
         private SurfaceHolder holder;
         private Movie movie;
@@ -68,6 +70,7 @@ public class GlyphsService extends WallpaperService {
         private void drawUnicodeGlyph() {
             if(!visible)
                 return;
+
 
             lastUpdate = System.currentTimeMillis();
 
@@ -137,6 +140,10 @@ public class GlyphsService extends WallpaperService {
         public void onVisibilityChanged(boolean visible) {
             this.visible = visible;
             if (visible) {
+                SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                String refresh_value = sharedPref.getString("refresh_value", "5");
+                frameDuration = Integer.parseInt(refresh_value) * 1000;
+
                 handler.post(drawGIF);
             } else {
                 handler.removeCallbacks(drawGIF);
