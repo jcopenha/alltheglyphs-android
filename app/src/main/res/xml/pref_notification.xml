@@ -4,24 +4,1054 @@
          when checked/unchecked. -->
     <SwitchPreference
         android:defaultValue="true"
-        android:key="notifications_new_message"
-        android:title="@string/pref_title_new_message_notifications" />
-
-    <!-- Allows the user to choose a ringtone in the 'notification' category. -->
-    <!-- NOTE: This preference will be enabled only when the checkbox above is checked. -->
-    <!-- NOTE: RingtonePreference's summary should be set to its value by the activity code. -->
-    <RingtonePreference
-        android:defaultValue="content://settings/system/notification_sound"
-        android:dependency="notifications_new_message"
-        android:key="notifications_new_message_ringtone"
-        android:ringtoneType="notification"
-        android:title="@string/pref_title_ringtone" />
-
-    <!-- NOTE: This preference will be enabled only when the checkbox above is checked. -->
+        android:key="unicode_block_all"
+        android:title="@string/pref_title_unicode_block_all" />
     <SwitchPreference
         android:defaultValue="true"
-        android:dependency="notifications_new_message"
-        android:key="notifications_new_message_vibrate"
-        android:title="@string/pref_title_vibrate" />
-
+        android:key="unicode_block_basic_latin"
+        android:title="@string/pref_title_unicode_block_basic_latin" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_latin_1_supplement"
+        android:title="@string/pref_title_unicode_block_latin_1_supplement" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_latin_extended_a"
+        android:title="@string/pref_title_unicode_block_latin_extended_a" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_latin_extended_b"
+        android:title="@string/pref_title_unicode_block_latin_extended_b" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_ipa_extensions"
+        android:title="@string/pref_title_unicode_block_ipa_extensions" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_spacing_modifier_letters"
+        android:title="@string/pref_title_unicode_block_spacing_modifier_letters" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_combining_diacritical_marks"
+        android:title="@string/pref_title_unicode_block_combining_diacritical_marks" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_greek_and_coptic"
+        android:title="@string/pref_title_unicode_block_greek_and_coptic" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_cyrillic"
+        android:title="@string/pref_title_unicode_block_cyrillic" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_cyrillic_supplement"
+        android:title="@string/pref_title_unicode_block_cyrillic_supplement" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_armenian"
+        android:title="@string/pref_title_unicode_block_armenian" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_hebrew"
+        android:title="@string/pref_title_unicode_block_hebrew" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_arabic"
+        android:title="@string/pref_title_unicode_block_arabic" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_syriac"
+        android:title="@string/pref_title_unicode_block_syriac" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_arabic_supplement"
+        android:title="@string/pref_title_unicode_block_arabic_supplement" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_thaana"
+        android:title="@string/pref_title_unicode_block_thaana" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_nko"
+        android:title="@string/pref_title_unicode_block_nko" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_samaritan"
+        android:title="@string/pref_title_unicode_block_samaritan" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_mandaic"
+        android:title="@string/pref_title_unicode_block_mandaic" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_arabic_extended_a"
+        android:title="@string/pref_title_unicode_block_arabic_extended_a" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_devanagari"
+        android:title="@string/pref_title_unicode_block_devanagari" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_bengali"
+        android:title="@string/pref_title_unicode_block_bengali" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_gurmukhi"
+        android:title="@string/pref_title_unicode_block_gurmukhi" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_gujarati"
+        android:title="@string/pref_title_unicode_block_gujarati" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_oriya"
+        android:title="@string/pref_title_unicode_block_oriya" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_tamil"
+        android:title="@string/pref_title_unicode_block_tamil" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_telugu"
+        android:title="@string/pref_title_unicode_block_telugu" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_kannada"
+        android:title="@string/pref_title_unicode_block_kannada" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_malayalam"
+        android:title="@string/pref_title_unicode_block_malayalam" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_sinhala"
+        android:title="@string/pref_title_unicode_block_sinhala" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_thai"
+        android:title="@string/pref_title_unicode_block_thai" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_lao"
+        android:title="@string/pref_title_unicode_block_lao" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_tibetan"
+        android:title="@string/pref_title_unicode_block_tibetan" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_myanmar"
+        android:title="@string/pref_title_unicode_block_myanmar" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_georgian"
+        android:title="@string/pref_title_unicode_block_georgian" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_hangul_jamo"
+        android:title="@string/pref_title_unicode_block_hangul_jamo" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_ethiopic"
+        android:title="@string/pref_title_unicode_block_ethiopic" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_ethiopic_supplement"
+        android:title="@string/pref_title_unicode_block_ethiopic_supplement" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_cherokee"
+        android:title="@string/pref_title_unicode_block_cherokee" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_unified_canadian_aboriginal_syllabics"
+        android:title="@string/pref_title_unicode_block_unified_canadian_aboriginal_syllabics" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_ogham"
+        android:title="@string/pref_title_unicode_block_ogham" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_runic"
+        android:title="@string/pref_title_unicode_block_runic" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_tagalog"
+        android:title="@string/pref_title_unicode_block_tagalog" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_hanunoo"
+        android:title="@string/pref_title_unicode_block_hanunoo" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_buhid"
+        android:title="@string/pref_title_unicode_block_buhid" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_tagbanwa"
+        android:title="@string/pref_title_unicode_block_tagbanwa" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_khmer"
+        android:title="@string/pref_title_unicode_block_khmer" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_mongolian"
+        android:title="@string/pref_title_unicode_block_mongolian" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_unified_canadian_aboriginal_syllabics_extended"
+        android:title="@string/pref_title_unicode_block_unified_canadian_aboriginal_syllabics_extended" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_limbu"
+        android:title="@string/pref_title_unicode_block_limbu" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_tai_le"
+        android:title="@string/pref_title_unicode_block_tai_le" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_new_tai_lue"
+        android:title="@string/pref_title_unicode_block_new_tai_lue" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_khmer_symbols"
+        android:title="@string/pref_title_unicode_block_khmer_symbols" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_buginese"
+        android:title="@string/pref_title_unicode_block_buginese" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_tai_tham"
+        android:title="@string/pref_title_unicode_block_tai_tham" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_combining_diacritical_marks_extended"
+        android:title="@string/pref_title_unicode_block_combining_diacritical_marks_extended" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_balinese"
+        android:title="@string/pref_title_unicode_block_balinese" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_sundanese"
+        android:title="@string/pref_title_unicode_block_sundanese" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_batak"
+        android:title="@string/pref_title_unicode_block_batak" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_lepcha"
+        android:title="@string/pref_title_unicode_block_lepcha" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_ol_chiki"
+        android:title="@string/pref_title_unicode_block_ol_chiki" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_sundanese_supplement"
+        android:title="@string/pref_title_unicode_block_sundanese_supplement" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_vedic_extensions"
+        android:title="@string/pref_title_unicode_block_vedic_extensions" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_phonetic_extensions"
+        android:title="@string/pref_title_unicode_block_phonetic_extensions" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_phonetic_extensions_supplement"
+        android:title="@string/pref_title_unicode_block_phonetic_extensions_supplement" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_combining_diacritical_marks_supplement"
+        android:title="@string/pref_title_unicode_block_combining_diacritical_marks_supplement" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_latin_extended_additional"
+        android:title="@string/pref_title_unicode_block_latin_extended_additional" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_greek_extended"
+        android:title="@string/pref_title_unicode_block_greek_extended" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_general_punctuation"
+        android:title="@string/pref_title_unicode_block_general_punctuation" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_superscripts_and_subscripts"
+        android:title="@string/pref_title_unicode_block_superscripts_and_subscripts" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_currency_symbols"
+        android:title="@string/pref_title_unicode_block_currency_symbols" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_combining_diacritical_marks_for_symbols"
+        android:title="@string/pref_title_unicode_block_combining_diacritical_marks_for_symbols" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_letterlike_symbols"
+        android:title="@string/pref_title_unicode_block_letterlike_symbols" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_number_forms"
+        android:title="@string/pref_title_unicode_block_number_forms" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_arrows"
+        android:title="@string/pref_title_unicode_block_arrows" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_mathematical_operators"
+        android:title="@string/pref_title_unicode_block_mathematical_operators" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_miscellaneous_technical"
+        android:title="@string/pref_title_unicode_block_miscellaneous_technical" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_control_pictures"
+        android:title="@string/pref_title_unicode_block_control_pictures" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_optical_character_recognition"
+        android:title="@string/pref_title_unicode_block_optical_character_recognition" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_enclosed_alphanumerics"
+        android:title="@string/pref_title_unicode_block_enclosed_alphanumerics" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_box_drawing"
+        android:title="@string/pref_title_unicode_block_box_drawing" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_block_elements"
+        android:title="@string/pref_title_unicode_block_block_elements" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_geometric_shapes"
+        android:title="@string/pref_title_unicode_block_geometric_shapes" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_miscellaneous_symbols"
+        android:title="@string/pref_title_unicode_block_miscellaneous_symbols" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_dingbats"
+        android:title="@string/pref_title_unicode_block_dingbats" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_miscellaneous_mathematical_symbols_a"
+        android:title="@string/pref_title_unicode_block_miscellaneous_mathematical_symbols_a" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_supplemental_arrows_a"
+        android:title="@string/pref_title_unicode_block_supplemental_arrows_a" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_braille_patterns"
+        android:title="@string/pref_title_unicode_block_braille_patterns" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_supplemental_arrows_b"
+        android:title="@string/pref_title_unicode_block_supplemental_arrows_b" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_miscellaneous_mathematical_symbols_b"
+        android:title="@string/pref_title_unicode_block_miscellaneous_mathematical_symbols_b" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_supplemental_mathematical_operators"
+        android:title="@string/pref_title_unicode_block_supplemental_mathematical_operators" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_miscellaneous_symbols_and_arrows"
+        android:title="@string/pref_title_unicode_block_miscellaneous_symbols_and_arrows" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_glagolitic"
+        android:title="@string/pref_title_unicode_block_glagolitic" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_latin_extended_c"
+        android:title="@string/pref_title_unicode_block_latin_extended_c" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_coptic"
+        android:title="@string/pref_title_unicode_block_coptic" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_georgian_supplement"
+        android:title="@string/pref_title_unicode_block_georgian_supplement" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_tifinagh"
+        android:title="@string/pref_title_unicode_block_tifinagh" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_ethiopic_extended"
+        android:title="@string/pref_title_unicode_block_ethiopic_extended" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_cyrillic_extended_a"
+        android:title="@string/pref_title_unicode_block_cyrillic_extended_a" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_supplemental_punctuation"
+        android:title="@string/pref_title_unicode_block_supplemental_punctuation" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_cjk_radicals_supplement"
+        android:title="@string/pref_title_unicode_block_cjk_radicals_supplement" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_kangxi_radicals"
+        android:title="@string/pref_title_unicode_block_kangxi_radicals" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_ideographic_description_characters"
+        android:title="@string/pref_title_unicode_block_ideographic_description_characters" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_cjk_symbols_and_punctuation"
+        android:title="@string/pref_title_unicode_block_cjk_symbols_and_punctuation" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_hiragana"
+        android:title="@string/pref_title_unicode_block_hiragana" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_katakana"
+        android:title="@string/pref_title_unicode_block_katakana" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_bopomofo"
+        android:title="@string/pref_title_unicode_block_bopomofo" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_hangul_compatibility_jamo"
+        android:title="@string/pref_title_unicode_block_hangul_compatibility_jamo" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_kanbun"
+        android:title="@string/pref_title_unicode_block_kanbun" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_bopomofo_extended"
+        android:title="@string/pref_title_unicode_block_bopomofo_extended" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_cjk_strokes"
+        android:title="@string/pref_title_unicode_block_cjk_strokes" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_katakana_phonetic_extensions"
+        android:title="@string/pref_title_unicode_block_katakana_phonetic_extensions" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_enclosed_cjk_letters_and_months"
+        android:title="@string/pref_title_unicode_block_enclosed_cjk_letters_and_months" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_cjk_compatibility"
+        android:title="@string/pref_title_unicode_block_cjk_compatibility" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_cjk_unified_ideographs_extension_a"
+        android:title="@string/pref_title_unicode_block_cjk_unified_ideographs_extension_a" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_yijing_hexagram_symbols"
+        android:title="@string/pref_title_unicode_block_yijing_hexagram_symbols" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_cjk_unified_ideographs"
+        android:title="@string/pref_title_unicode_block_cjk_unified_ideographs" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_yi_syllables"
+        android:title="@string/pref_title_unicode_block_yi_syllables" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_yi_radicals"
+        android:title="@string/pref_title_unicode_block_yi_radicals" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_lisu"
+        android:title="@string/pref_title_unicode_block_lisu" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_vai"
+        android:title="@string/pref_title_unicode_block_vai" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_cyrillic_extended_b"
+        android:title="@string/pref_title_unicode_block_cyrillic_extended_b" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_bamum"
+        android:title="@string/pref_title_unicode_block_bamum" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_modifier_tone_letters"
+        android:title="@string/pref_title_unicode_block_modifier_tone_letters" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_latin_extended_d"
+        android:title="@string/pref_title_unicode_block_latin_extended_d" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_syloti_nagri"
+        android:title="@string/pref_title_unicode_block_syloti_nagri" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_common_indic_number_forms"
+        android:title="@string/pref_title_unicode_block_common_indic_number_forms" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_phags_pa"
+        android:title="@string/pref_title_unicode_block_phags_pa" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_saurashtra"
+        android:title="@string/pref_title_unicode_block_saurashtra" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_devanagari_extended"
+        android:title="@string/pref_title_unicode_block_devanagari_extended" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_kayah_li"
+        android:title="@string/pref_title_unicode_block_kayah_li" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_rejang"
+        android:title="@string/pref_title_unicode_block_rejang" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_hangul_jamo_extended_a"
+        android:title="@string/pref_title_unicode_block_hangul_jamo_extended_a" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_javanese"
+        android:title="@string/pref_title_unicode_block_javanese" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_myanmar_extended_b"
+        android:title="@string/pref_title_unicode_block_myanmar_extended_b" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_cham"
+        android:title="@string/pref_title_unicode_block_cham" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_myanmar_extended_a"
+        android:title="@string/pref_title_unicode_block_myanmar_extended_a" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_tai_viet"
+        android:title="@string/pref_title_unicode_block_tai_viet" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_meetei_mayek_extensions"
+        android:title="@string/pref_title_unicode_block_meetei_mayek_extensions" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_ethiopic_extended_a"
+        android:title="@string/pref_title_unicode_block_ethiopic_extended_a" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_latin_extended_e"
+        android:title="@string/pref_title_unicode_block_latin_extended_e" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_cherokee_supplement"
+        android:title="@string/pref_title_unicode_block_cherokee_supplement" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_meetei_mayek"
+        android:title="@string/pref_title_unicode_block_meetei_mayek" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_hangul_syllables"
+        android:title="@string/pref_title_unicode_block_hangul_syllables" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_hangul_jamo_extended_b"
+        android:title="@string/pref_title_unicode_block_hangul_jamo_extended_b" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_high_surrogates"
+        android:title="@string/pref_title_unicode_block_high_surrogates" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_high_private_use_surrogates"
+        android:title="@string/pref_title_unicode_block_high_private_use_surrogates" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_low_surrogates"
+        android:title="@string/pref_title_unicode_block_low_surrogates" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_private_use_area"
+        android:title="@string/pref_title_unicode_block_private_use_area" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_cjk_compatibility_ideographs"
+        android:title="@string/pref_title_unicode_block_cjk_compatibility_ideographs" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_alphabetic_presentation_forms"
+        android:title="@string/pref_title_unicode_block_alphabetic_presentation_forms" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_arabic_presentation_forms_a"
+        android:title="@string/pref_title_unicode_block_arabic_presentation_forms_a" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_variation_selectors"
+        android:title="@string/pref_title_unicode_block_variation_selectors" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_vertical_forms"
+        android:title="@string/pref_title_unicode_block_vertical_forms" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_combining_half_marks"
+        android:title="@string/pref_title_unicode_block_combining_half_marks" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_cjk_compatibility_forms"
+        android:title="@string/pref_title_unicode_block_cjk_compatibility_forms" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_small_form_variants"
+        android:title="@string/pref_title_unicode_block_small_form_variants" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_arabic_presentation_forms_b"
+        android:title="@string/pref_title_unicode_block_arabic_presentation_forms_b" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_halfwidth_and_fullwidth_forms"
+        android:title="@string/pref_title_unicode_block_halfwidth_and_fullwidth_forms" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_specials"
+        android:title="@string/pref_title_unicode_block_specials" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_linear_b_syllabary"
+        android:title="@string/pref_title_unicode_block_linear_b_syllabary" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_linear_b_ideograms"
+        android:title="@string/pref_title_unicode_block_linear_b_ideograms" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_aegean_numbers"
+        android:title="@string/pref_title_unicode_block_aegean_numbers" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_ancient_greek_numbers"
+        android:title="@string/pref_title_unicode_block_ancient_greek_numbers" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_ancient_symbols"
+        android:title="@string/pref_title_unicode_block_ancient_symbols" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_phaistos_disc"
+        android:title="@string/pref_title_unicode_block_phaistos_disc" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_lycian"
+        android:title="@string/pref_title_unicode_block_lycian" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_carian"
+        android:title="@string/pref_title_unicode_block_carian" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_coptic_epact_numbers"
+        android:title="@string/pref_title_unicode_block_coptic_epact_numbers" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_old_italic"
+        android:title="@string/pref_title_unicode_block_old_italic" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_gothic"
+        android:title="@string/pref_title_unicode_block_gothic" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_old_permic"
+        android:title="@string/pref_title_unicode_block_old_permic" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_ugaritic"
+        android:title="@string/pref_title_unicode_block_ugaritic" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_old_persian"
+        android:title="@string/pref_title_unicode_block_old_persian" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_deseret"
+        android:title="@string/pref_title_unicode_block_deseret" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_shavian"
+        android:title="@string/pref_title_unicode_block_shavian" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_osmanya"
+        android:title="@string/pref_title_unicode_block_osmanya" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_elbasan"
+        android:title="@string/pref_title_unicode_block_elbasan" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_caucasian_albanian"
+        android:title="@string/pref_title_unicode_block_caucasian_albanian" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_linear_a"
+        android:title="@string/pref_title_unicode_block_linear_a" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_cypriot_syllabary"
+        android:title="@string/pref_title_unicode_block_cypriot_syllabary" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_imperial_aramaic"
+        android:title="@string/pref_title_unicode_block_imperial_aramaic" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_palmyrene"
+        android:title="@string/pref_title_unicode_block_palmyrene" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_nabataean"
+        android:title="@string/pref_title_unicode_block_nabataean" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_hatran"
+        android:title="@string/pref_title_unicode_block_hatran" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_phoenician"
+        android:title="@string/pref_title_unicode_block_phoenician" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_lydian"
+        android:title="@string/pref_title_unicode_block_lydian" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_meroitic_hieroglyphs"
+        android:title="@string/pref_title_unicode_block_meroitic_hieroglyphs" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_meroitic_cursive"
+        android:title="@string/pref_title_unicode_block_meroitic_cursive" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_kharoshthi"
+        android:title="@string/pref_title_unicode_block_kharoshthi" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_old_south_arabian"
+        android:title="@string/pref_title_unicode_block_old_south_arabian" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_old_north_arabian"
+        android:title="@string/pref_title_unicode_block_old_north_arabian" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_manichaean"
+        android:title="@string/pref_title_unicode_block_manichaean" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_avestan"
+        android:title="@string/pref_title_unicode_block_avestan" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_inscriptional_parthian"
+        android:title="@string/pref_title_unicode_block_inscriptional_parthian" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_inscriptional_pahlavi"
+        android:title="@string/pref_title_unicode_block_inscriptional_pahlavi" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_psalter_pahlavi"
+        android:title="@string/pref_title_unicode_block_psalter_pahlavi" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_old_turkic"
+        android:title="@string/pref_title_unicode_block_old_turkic" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_old_hungarian"
+        android:title="@string/pref_title_unicode_block_old_hungarian" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_rumi_numeral_symbols"
+        android:title="@string/pref_title_unicode_block_rumi_numeral_symbols" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_brahmi"
+        android:title="@string/pref_title_unicode_block_brahmi" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_kaithi"
+        android:title="@string/pref_title_unicode_block_kaithi" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_sora_sompeng"
+        android:title="@string/pref_title_unicode_block_sora_sompeng" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_chakma"
+        android:title="@string/pref_title_unicode_block_chakma" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_mahajani"
+        android:title="@string/pref_title_unicode_block_mahajani" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_sharada"
+        android:title="@string/pref_title_unicode_block_sharada" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_sinhala_archaic_numbers"
+        android:title="@string/pref_title_unicode_block_sinhala_archaic_numbers" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_khojki"
+        android:title="@string/pref_title_unicode_block_khojki" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_multani"
+        android:title="@string/pref_title_unicode_block_multani" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_khudawadi"
+        android:title="@string/pref_title_unicode_block_khudawadi" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_grantha"
+        android:title="@string/pref_title_unicode_block_grantha" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_tirhuta"
+        android:title="@string/pref_title_unicode_block_tirhuta" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_siddham"
+        android:title="@string/pref_title_unicode_block_siddham" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_modi"
+        android:title="@string/pref_title_unicode_block_modi" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_takri"
+        android:title="@string/pref_title_unicode_block_takri" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_ahom"
+        android:title="@string/pref_title_unicode_block_ahom" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_warang_citi"
+        android:title="@string/pref_title_unicode_block_warang_citi" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_pau_cin_hau"
+        android:title="@string/pref_title_unicode_block_pau_cin_hau" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_cuneiform"
+        android:title="@string/pref_title_unicode_block_cuneiform" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_cuneiform_numbers_and_punctuation"
+        android:title="@string/pref_title_unicode_block_cuneiform_numbers_and_punctuation" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_early_dynastic_cuneiform"
+        android:title="@string/pref_title_unicode_block_early_dynastic_cuneiform" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_egyptian_hieroglyphs"
+        android:title="@string/pref_title_unicode_block_egyptian_hieroglyphs" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_anatolian_hieroglyphs"
+        android:title="@string/pref_title_unicode_block_anatolian_hieroglyphs" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_bamum_supplement"
+        android:title="@string/pref_title_unicode_block_bamum_supplement" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_mro"
+        android:title="@string/pref_title_unicode_block_mro" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_bassa_vah"
+        android:title="@string/pref_title_unicode_block_bassa_vah" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_pahawh_hmong"
+        android:title="@string/pref_title_unicode_block_pahawh_hmong" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_miao"
+        android:title="@string/pref_title_unicode_block_miao" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_kana_supplement"
+        android:title="@string/pref_title_unicode_block_kana_supplement" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_duployan"
+        android:title="@string/pref_title_unicode_block_duployan" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_shorthand_format_controls"
+        android:title="@string/pref_title_unicode_block_shorthand_format_controls" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_byzantine_musical_symbols"
+        android:title="@string/pref_title_unicode_block_byzantine_musical_symbols" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_musical_symbols"
+        android:title="@string/pref_title_unicode_block_musical_symbols" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_ancient_greek_musical_notation"
+        android:title="@string/pref_title_unicode_block_ancient_greek_musical_notation" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_tai_xuan_jing_symbols"
+        android:title="@string/pref_title_unicode_block_tai_xuan_jing_symbols" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_counting_rod_numerals"
+        android:title="@string/pref_title_unicode_block_counting_rod_numerals" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_mathematical_alphanumeric_symbols"
+        android:title="@string/pref_title_unicode_block_mathematical_alphanumeric_symbols" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_sutton_signwriting"
+        android:title="@string/pref_title_unicode_block_sutton_signwriting" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_mende_kikakui"
+        android:title="@string/pref_title_unicode_block_mende_kikakui" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_arabic_mathematical_alphabetic_symbols"
+        android:title="@string/pref_title_unicode_block_arabic_mathematical_alphabetic_symbols" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_mahjong_tiles"
+        android:title="@string/pref_title_unicode_block_mahjong_tiles" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_domino_tiles"
+        android:title="@string/pref_title_unicode_block_domino_tiles" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_playing_cards"
+        android:title="@string/pref_title_unicode_block_playing_cards" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_enclosed_alphanumeric_supplement"
+        android:title="@string/pref_title_unicode_block_enclosed_alphanumeric_supplement" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_enclosed_ideographic_supplement"
+        android:title="@string/pref_title_unicode_block_enclosed_ideographic_supplement" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_miscellaneous_symbols_and_pictographs"
+        android:title="@string/pref_title_unicode_block_miscellaneous_symbols_and_pictographs" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_emoticons"
+        android:title="@string/pref_title_unicode_block_emoticons" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_ornamental_dingbats"
+        android:title="@string/pref_title_unicode_block_ornamental_dingbats" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_transport_and_map_symbols"
+        android:title="@string/pref_title_unicode_block_transport_and_map_symbols" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_alchemical_symbols"
+        android:title="@string/pref_title_unicode_block_alchemical_symbols" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_geometric_shapes_extended"
+        android:title="@string/pref_title_unicode_block_geometric_shapes_extended" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_supplemental_arrows_c"
+        android:title="@string/pref_title_unicode_block_supplemental_arrows_c" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_supplemental_symbols_and_pictographs"
+        android:title="@string/pref_title_unicode_block_supplemental_symbols_and_pictographs" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_cjk_unified_ideographs_extension_b"
+        android:title="@string/pref_title_unicode_block_cjk_unified_ideographs_extension_b" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_cjk_unified_ideographs_extension_c"
+        android:title="@string/pref_title_unicode_block_cjk_unified_ideographs_extension_c" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_cjk_unified_ideographs_extension_d"
+        android:title="@string/pref_title_unicode_block_cjk_unified_ideographs_extension_d" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_cjk_unified_ideographs_extension_e"
+        android:title="@string/pref_title_unicode_block_cjk_unified_ideographs_extension_e" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_cjk_compatibility_ideographs_supplement"
+        android:title="@string/pref_title_unicode_block_cjk_compatibility_ideographs_supplement" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_tags"
+        android:title="@string/pref_title_unicode_block_tags" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_variation_selectors_supplement"
+        android:title="@string/pref_title_unicode_block_variation_selectors_supplement" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_supplementary_private_use_area_a"
+        android:title="@string/pref_title_unicode_block_supplementary_private_use_area_a" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="unicode_block_supplementary_private_use_area_b"
+        android:title="@string/pref_title_unicode_block_supplementary_private_use_area_b" />
 </PreferenceScreen>
